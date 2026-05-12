@@ -1,0 +1,16 @@
+[package]
+name = "pdf_to_audiobook"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+pdf-extract = "0.8"
+regex = "1"
+reqwest = { version = "0.11", default-features = false, features = ["json", "rustls-tls"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+
+[patch.crates-io]
+pdf-extract = { path = "vendor/pdf-extract" }
+
